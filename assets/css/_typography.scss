@@ -81,3 +81,11 @@ $text-presets: (
     font-style: normal;
   }
 }
+
+h1 {
+  @include text-preset(2);
+}
+p {
+  @include text-preset(4-regular);
+  opacity: 0.5;
+}

@@ -1,0 +1,12 @@
+@use '../variables' as *;
+@use '../typography' as *;
+
+a.button {
+  width: fit-content;
+  padding: 13px 30px;
+  background-color: $orange-400;
+  box-shadow: 0px 15px 15px -10px #ff9f8e;
+  border-radius: 22px;
+  @include text-preset(5-bold);
+  color: $white;
+}

@@ -3,3 +3,22 @@
 @use 'reset';
 @use 'typography';
 @use 'layout';
+
+@use 'components/button';
+
+.hero {
+  display: grid;
+  gap: 24px;
+
+  .text-container {
+    display: grid;
+    gap: 32px;
+    text-align: center;
+    justify-items: center;
+
+    .text-wrapper {
+      display: grid;
+      gap: 24px;
+    }
+  }
+}
