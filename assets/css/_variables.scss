@@ -1,12 +1,32 @@
 // COLORS
-// Primary
-$orange-400: hsl(12, 88%, 59%);
-$blue-950: hsl(228, 39%, 23%);
+// BASE COLORS
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
 
-// Neutral
-$gray-950: hsl(233, 12%, 13%);
-$orange-50: hsl(13, 100%, 96%);
-$gray-50: hsl(0, 0%, 98%);
+// GRAYS
+$gray-950: hsl(233, 12%, 13%); // #1D1E25
+$gray-900: hsl(210, 10%, 23%); // #343A40
+$gray-400: hsl(0, 0%, 55%); // #8D8D8D
+$gray-50: hsl(0, 0%, 98%); // #FAFAFA
+
+// ORANGE
+$orange-400: hsl(12, 88%, 59%); // #F3603C
+$orange-350: hsl(12, 92%, 72%); // #F98F75
+$orange-50: hsl(13, 100%, 96%); // #FFF0EC
+
+// BLUE
+$blue-950: hsl(228, 39%, 23%); // #242D52
+$blue-50: hsl(192, 11%, 91%); // #E5E9EA
+
+// RED
+$red-500: hsl(0, 88%, 59%); // #F33C3C
+
+// GRADIENTS
+$gradient-1: linear-gradient(
+  180deg,
+  rgba(0, 0, 0, 0) 0%,
+  rgba(0, 0, 0, 0.6) 60%
+);
 
 // BREAKPOINTS
 $breakpoint-tablet: 768px;
