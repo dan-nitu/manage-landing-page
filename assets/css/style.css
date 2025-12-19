@@ -88,6 +88,14 @@ h1 {
   font-style: normal;
 }
 
+h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: 0px;
+  font-style: normal;
+}
+
 p {
   font-weight: 400;
   font-size: 16px;
@@ -97,6 +105,14 @@ p {
   opacity: 0.5;
 }
 
+p.bigger {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 162.5%;
+  letter-spacing: 0px;
+  font-style: normal;
+}
+
 html {
   font-family: "Be Vietnam Pro", sans-serif;
   background-color: hsl(0, 0%, 100%);
@@ -104,7 +120,10 @@ html {
 }
 
 section {
-  padding: 56px 26px 112px 26px;
+  padding: 0 26px 112px 26px;
+}
+section:first-of-type {
+  padding-top: 56px;
 }
 
 a.button {
@@ -135,4 +154,18 @@ a.button {
 .hero .text-container .text-wrapper {
   display: grid;
   gap: 24px;
+}
+
+.features {
+  display: grid;
+  gap: 40px;
+}
+.features .features-content {
+  display: grid;
+  gap: 24px;
+  text-align: center;
+}
+.features .features-list {
+  display: grid;
+  gap: 40px;
 }/*# sourceMappingURL=style.css.map */

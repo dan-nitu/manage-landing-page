@@ -22,3 +22,19 @@
     }
   }
 }
+
+.features {
+  display: grid;
+  gap: 40px;
+
+  .features-content {
+    display: grid;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .features-list {
+    display: grid;
+    gap: 40px;
+  }
+}

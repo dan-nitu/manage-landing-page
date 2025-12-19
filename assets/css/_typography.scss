@@ -85,7 +85,13 @@ $text-presets: (
 h1 {
   @include text-preset(2);
 }
+h2 {
+  @include text-preset(3);
+}
 p {
   @include text-preset(4-regular);
   opacity: 0.5;
+}
+p.bigger {
+  @include text-preset(4-regular);
 }
