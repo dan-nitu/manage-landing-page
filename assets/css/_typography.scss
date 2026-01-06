@@ -95,3 +95,6 @@ p {
 p.bigger {
   @include text-preset(4-regular);
 }
+span.bold {
+  @include text-preset(5-bold);
+}

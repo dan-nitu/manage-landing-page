@@ -113,6 +113,14 @@ p.bigger {
   font-style: normal;
 }
 
+span.bold {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 145%;
+  letter-spacing: 0px;
+  font-style: normal;
+}
+
 html {
   font-family: "Be Vietnam Pro", sans-serif;
   background-color: hsl(0, 0%, 100%);
@@ -140,6 +148,11 @@ a.button {
   font-style: normal;
   color: hsl(0, 0%, 100%);
 }
+a.button.inverted {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(12, 88%, 59%);
+  box-shadow: 0px 15px 15px -10px #db5943;
+}
 
 .hero {
   display: grid;
@@ -159,13 +172,108 @@ a.button {
 .features {
   display: grid;
   gap: 40px;
+  padding-left: 16px;
+  padding-right: 0;
 }
 .features .features-content {
   display: grid;
   gap: 24px;
   text-align: center;
+  padding-right: 26px;
 }
 .features .features-list {
   display: grid;
+  gap: 40px;
+}
+.features .features-list .feature-item {
+  display: grid;
+  gap: 8px;
+}
+.features .features-list .feature-item .feature-item-header {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 145%;
+  letter-spacing: 0px;
+  font-style: normal;
+  color: hsl(228, 39%, 23%);
+  background-color: hsl(13, 100%, 96%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-top-left-radius: 39px;
+  border-bottom-left-radius: 39px;
+}
+.features .features-list .feature-item .feature-item-header span {
+  background-color: hsl(12, 88%, 59%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 39px;
+  padding: 8px 24px;
+}
+
+.testimonial {
+  display: grid;
+  gap: 40px;
+  padding-inline: 0;
+  text-align: center;
+}
+.testimonial .testimonial-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.testimonial .testimonial-container .testimonial-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 27px;
+}
+.testimonial .testimonial-container .testimonial-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 26px 8px 0 8px;
+  background-color: hsl(0, 0%, 98%);
+}
+.testimonial .testimonial-container .testimonial-card img {
+  margin-inline: auto;
+  max-width: 72px;
+}
+.testimonial .testimonial-container .testimonial-card p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 200%;
+  letter-spacing: 0px;
+  font-style: normal;
+  max-width: 300px;
+}
+.testimonial .testimonial-container .pagination-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.testimonial .testimonial-container .pagination-dots span {
+  width: 7px;
+  height: 7px;
+  border: 1px solid hsl(12, 88%, 59%);
+  border-radius: 3.5px;
+}
+.testimonial .testimonial-container .pagination-dots span.active {
+  background-color: hsl(12, 88%, 59%);
+}
+
+.call-to-action {
+  background-color: hsl(12, 88%, 59%);
+  background-image: url("../images/bg-simplify-section-mobile.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  color: hsl(0, 0%, 100%);
+  padding: 95px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 40px;
 }/*# sourceMappingURL=style.css.map */
