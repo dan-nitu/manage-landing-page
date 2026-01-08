@@ -1,0 +1,81 @@
+@use '../variables' as *;
+@use '../typography' as *;
+
+footer {
+  background-color: $gray-950;
+  padding: 40px 24px;
+
+  display: grid;
+  gap: 48px;
+
+  form {
+    display: flex;
+    gap: 8px;
+
+    input {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      padding: 0px 24px;
+
+      height: 44px;
+
+      @include text-preset(5-regular);
+      color: $blue-950;
+      background: $white;
+      border-radius: 22px;
+      border: none;
+
+      &::placeholder {
+        @include text-preset(5-regular);
+        color: $gray-400;
+      }
+    }
+
+    button {
+      box-shadow: none;
+    }
+  }
+
+  ul {
+    @include text-preset(4-regular);
+    color: $white;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 26px;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      li {
+        height: fit-content;
+      }
+    }
+  }
+
+  .social-media-links {
+    display: grid;
+    justify-items: center;
+    gap: 56px;
+    padding-inline: 20px;
+
+    .social-media-icons {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      img {
+        width: 32px;
+      }
+    }
+
+    .copyright {
+      @include text-preset(5-medium);
+      color: $white;
+      opacity: 0.5;
+    }
+  }
+}
