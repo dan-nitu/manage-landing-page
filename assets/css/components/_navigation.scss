@@ -1,0 +1,78 @@
+@use '../variables' as *;
+@use '../typography' as *;
+
+body:has(#nav-toggle:checked) {
+  overflow: hidden;
+}
+
+nav {
+  position: relative;
+  isolation: isolate;
+  margin: 41px 24px 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-toggle {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+
+    & ~ label {
+      height: 18px;
+      width: 25px;
+
+      background-image: url('../../assets/images/icon-hamburger.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:checked {
+      & ~ label {
+        height: 20px;
+        width: 20px;
+
+        background-image: url('../../assets/images/icon-close.svg');
+      }
+
+      & ~ ul {
+        display: grid;
+      }
+    }
+  }
+
+  ul {
+    display: none;
+    position: absolute;
+
+    top: 62px;
+    padding: 40px 118px;
+    gap: 24px;
+
+    flex-basis: 100%;
+    flex-shrink: 0;
+
+    list-style: none;
+    text-align: center;
+
+    background: $white;
+    box-shadow: 0px 10px 20px rgba(80, 86, 98, 0.03);
+    border-radius: 4px;
+
+    color: $blue-950;
+    @include text-preset(4-bold);
+
+    &:before {
+      content: '';
+      position: fixed;
+      z-index: -1;
+      pointer-events: none;
+      inset: 0;
+      background: $gradient-1;
+    }
+  }
+}

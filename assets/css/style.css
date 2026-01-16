@@ -134,6 +134,66 @@ section:first-of-type {
   padding-top: 56px;
 }
 
+body:has(#nav-toggle:checked) {
+  overflow: hidden;
+}
+
+nav {
+  position: relative;
+  isolation: isolate;
+  margin: 41px 24px 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .nav-toggle {
+  display: none;
+}
+nav .nav-toggle ~ label {
+  height: 18px;
+  width: 25px;
+  background-image: url("../../assets/images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+nav .nav-toggle:checked ~ label {
+  height: 20px;
+  width: 20px;
+  background-image: url("../../assets/images/icon-close.svg");
+}
+nav .nav-toggle:checked ~ ul {
+  display: grid;
+}
+nav ul {
+  display: none;
+  position: absolute;
+  top: 62px;
+  padding: 40px 118px;
+  gap: 24px;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  list-style: none;
+  text-align: center;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0px 10px 20px rgba(80, 86, 98, 0.03);
+  border-radius: 4px;
+  color: hsl(228, 39%, 23%);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 145%;
+  letter-spacing: 0px;
+  font-style: normal;
+}
+nav ul:before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%);
+}
+
 a.button,
 button {
   width: -moz-fit-content;
