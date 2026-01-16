@@ -148,7 +148,11 @@ nav {
   align-items: center;
 }
 nav .nav-toggle {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
 }
 nav .nav-toggle ~ label {
   height: 18px;
@@ -190,6 +194,7 @@ nav ul:before {
   content: "";
   position: fixed;
   z-index: -1;
+  pointer-events: none;
   inset: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%);
 }
@@ -370,11 +375,15 @@ footer .social-media-links .copyright {
 }
 .testimonial .testimonial-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  overflow-x: auto;
   gap: 32px;
+  scrollbar-color: hsl(12, 88%, 59%) hsl(0, 0%, 100%);
+  scrollbar-width: thin;
+  scroll-snap-type: x mandatory;
 }
 .testimonial .testimonial-container .testimonial-card {
+  scroll-snap-align: center;
+  min-width: 375px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -401,19 +410,8 @@ footer .social-media-links .copyright {
   font-style: normal;
   max-width: 300px;
 }
-.testimonial .testimonial-container .pagination-dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-}
-.testimonial .testimonial-container .pagination-dots span {
-  width: 7px;
-  height: 7px;
-  border: 1px solid hsl(12, 88%, 59%);
-  border-radius: 3.5px;
-}
-.testimonial .testimonial-container .pagination-dots span.active {
-  background-color: hsl(12, 88%, 59%);
+.testimonial a {
+  margin-inline: auto;
 }
 
 .call-to-action {
