@@ -12,6 +12,10 @@
   display: grid;
   gap: 24px;
 
+  img {
+    margin: auto;
+  }
+
   .text-container {
     display: grid;
     gap: 32px;
@@ -21,6 +25,7 @@
     .text-wrapper {
       display: grid;
       gap: 24px;
+      max-width: 500px;
     }
   }
 }
@@ -30,12 +35,18 @@
   gap: 40px;
 
   padding-left: 16px;
+  @media (min-width: $breakpoint-tablet) {
+    padding-left: 32px;
+  }
   padding-right: 0;
+  justify-items: center;
 
   .features-content {
     display: grid;
     gap: 24px;
     text-align: center;
+
+    max-width: 500px;
 
     padding-right: 26px;
   }
@@ -84,12 +95,18 @@
     overflow-x: auto;
     gap: 32px;
 
+    @media (min-width: $breakpoint-tablet) {
+      gap: 105px;
+      margin-inline: 105px;
+    }
+
     scrollbar-color: $orange-400 $white;
     scrollbar-width: thin;
     scroll-snap-type: x mandatory;
 
     .testimonial-card {
       scroll-snap-align: center;
+      width: 100%;
       min-width: 375px;
       position: relative;
       display: flex;
@@ -97,6 +114,10 @@
       align-items: center;
       gap: 24px;
       padding-bottom: 27px;
+
+      @media (min-width: $breakpoint-tablet) {
+        min-width: 560px;
+      }
 
       &::before {
         content: '';
@@ -130,10 +151,18 @@
   background-position-y: center;
   color: $white;
   padding: 95px 40px;
+  @media (min-width: $breakpoint-tablet) {
+    padding-block: 40px;
+    background-size: 60px;
+  }
   text-align: center;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
+
+  > * {
+    max-width: 440px;
+  }
 }

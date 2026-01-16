@@ -9,6 +9,10 @@ html {
 section {
   padding: 0 26px 112px 26px;
 
+  @media (min-width: $breakpoint-tablet) {
+    padding-inline: 32px;
+  }
+
   &:first-of-type {
     padding-top: 56px;
   }

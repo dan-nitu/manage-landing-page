@@ -130,6 +130,11 @@ html {
 section {
   padding: 0 26px 112px 26px;
 }
+@media (min-width: 768px) {
+  section {
+    padding-inline: 32px;
+  }
+}
 section:first-of-type {
   padding-top: 56px;
 }
@@ -173,6 +178,7 @@ nav .nav-toggle:checked ~ ul {
 nav ul {
   display: none;
   position: absolute;
+  width: 100%;
   top: 62px;
   padding: 40px 118px;
   gap: 24px;
@@ -224,12 +230,22 @@ button.inverted {
 footer {
   background-color: hsl(233, 12%, 13%);
   padding: 40px 24px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 48px;
+}
+footer > * {
+  width: min(100%, 450px);
 }
 footer form {
   display: flex;
   gap: 8px;
+}
+@media (min-width: 768px) {
+  footer form {
+    gap: 24px;
+  }
 }
 footer form input {
   flex-grow: 1;
@@ -274,16 +290,20 @@ footer ul {
   font-style: normal;
   color: hsl(0, 0%, 100%);
   list-style: none;
-  display: flex;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
   justify-content: space-between;
   padding-inline: 26px;
-}
-footer ul > div {
-  display: flex;
-  flex-direction: column;
   gap: 8px;
 }
-footer ul > div li {
+@media (min-width: 768px) {
+  footer ul {
+    padding-inline: 0;
+    grid-template-rows: repeat(2, auto);
+  }
+}
+footer ul li {
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -292,6 +312,7 @@ footer .social-media-links {
   justify-items: center;
   gap: 56px;
   padding-inline: 20px;
+  max-width: 290px;
 }
 footer .social-media-links .social-media-icons {
   display: flex;
@@ -315,6 +336,9 @@ footer .social-media-links .copyright {
   display: grid;
   gap: 24px;
 }
+.hero img {
+  margin: auto;
+}
 .hero .text-container {
   display: grid;
   gap: 32px;
@@ -324,6 +348,7 @@ footer .social-media-links .copyright {
 .hero .text-container .text-wrapper {
   display: grid;
   gap: 24px;
+  max-width: 500px;
 }
 
 .features {
@@ -331,11 +356,18 @@ footer .social-media-links .copyright {
   gap: 40px;
   padding-left: 16px;
   padding-right: 0;
+  justify-items: center;
+}
+@media (min-width: 768px) {
+  .features {
+    padding-left: 32px;
+  }
 }
 .features .features-content {
   display: grid;
   gap: 24px;
   text-align: center;
+  max-width: 500px;
   padding-right: 26px;
 }
 .features .features-list {
@@ -381,8 +413,15 @@ footer .social-media-links .copyright {
   scrollbar-width: thin;
   scroll-snap-type: x mandatory;
 }
+@media (min-width: 768px) {
+  .testimonial .testimonial-container {
+    gap: 105px;
+    margin-inline: 105px;
+  }
+}
 .testimonial .testimonial-container .testimonial-card {
   scroll-snap-align: center;
+  width: 100%;
   min-width: 375px;
   position: relative;
   display: flex;
@@ -390,6 +429,11 @@ footer .social-media-links .copyright {
   align-items: center;
   gap: 24px;
   padding-bottom: 27px;
+}
+@media (min-width: 768px) {
+  .testimonial .testimonial-container .testimonial-card {
+    min-width: 560px;
+  }
 }
 .testimonial .testimonial-container .testimonial-card::before {
   content: "";
@@ -426,4 +470,13 @@ footer .social-media-links .copyright {
   flex-direction: column;
   align-items: center;
   gap: 40px;
+}
+@media (min-width: 768px) {
+  .call-to-action {
+    padding-block: 40px;
+    background-size: 60px;
+  }
+}
+.call-to-action > * {
+  max-width: 440px;
 }/*# sourceMappingURL=style.css.map */
