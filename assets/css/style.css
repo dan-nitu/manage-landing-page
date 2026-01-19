@@ -159,6 +159,11 @@ nav .nav-toggle {
   height: 1px;
   pointer-events: none;
 }
+@media (min-width: 1024px) {
+  nav .nav-toggle {
+    display: none;
+  }
+}
 nav .nav-toggle ~ label {
   height: 18px;
   width: 25px;
@@ -166,6 +171,11 @@ nav .nav-toggle ~ label {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+@media (min-width: 1024px) {
+  nav .nav-toggle ~ label {
+    display: none;
+  }
 }
 nav .nav-toggle:checked ~ label {
   height: 20px;
@@ -186,7 +196,7 @@ nav ul {
   flex-shrink: 0;
   list-style: none;
   text-align: center;
-  background: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   box-shadow: 0px 10px 20px rgba(80, 86, 98, 0.03);
   border-radius: 4px;
   color: hsl(228, 39%, 23%);
@@ -196,6 +206,19 @@ nav ul {
   letter-spacing: 0px;
   font-style: normal;
 }
+@media (min-width: 1024px) {
+  nav ul {
+    position: relative;
+    padding: 0;
+    top: 0;
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    gap: 32px;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+}
 nav ul:before {
   content: "";
   position: fixed;
@@ -203,6 +226,19 @@ nav ul:before {
   pointer-events: none;
   inset: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%);
+}
+@media (min-width: 1024px) {
+  nav ul:before {
+    background: none;
+  }
+}
+nav > a.button {
+  display: none;
+}
+@media (min-width: 1024px) {
+  nav > a.button {
+    display: inline-block;
+  }
 }
 
 a.button,
