@@ -10,6 +10,7 @@ button {
   border-radius: 22px;
   @include text-preset(5-bold);
   color: $white;
+  height: fit-content;
 
   &.inverted {
     background-color: $white;

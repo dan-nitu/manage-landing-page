@@ -12,6 +12,12 @@
   display: grid;
   gap: 24px;
 
+  @media (min-width: $breakpoint-desktop) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
   img {
     margin: auto;
   }
@@ -22,10 +28,21 @@
     text-align: center;
     justify-items: center;
 
+    @media (min-width: $breakpoint-desktop) {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      justify-content: center;
+    }
+
     .text-wrapper {
       display: grid;
       gap: 24px;
       max-width: 500px;
+
+      @media (min-width: $breakpoint-desktop) {
+        gap: 40px;
+      }
     }
   }
 }
@@ -41,6 +58,10 @@
   padding-right: 0;
   justify-items: center;
 
+  @media (min-width: $breakpoint-desktop) {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .features-content {
     display: grid;
     gap: 24px;
@@ -49,6 +70,12 @@
     max-width: 500px;
 
     padding-right: 26px;
+
+    @media (min-width: $breakpoint-desktop) {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
   }
 
   .features-list {
@@ -71,11 +98,21 @@
         border-top-left-radius: 39px;
         border-bottom-left-radius: 39px;
 
+        @media (min-width: $breakpoint-desktop) {
+          background-color: transparent;
+        }
+
         span {
           background-color: $orange-400;
           color: $white;
           border-radius: 39px;
           padding: 8px 24px;
+        }
+      }
+
+      p {
+        @media (min-width: $breakpoint-desktop) {
+          padding-left: 86px;
         }
       }
     }
@@ -89,6 +126,10 @@
 
   text-align: center;
 
+  @media (min-width: $breakpoint-desktop) {
+    gap: 64px;
+  }
+
   .testimonial-container {
     display: flex;
 
@@ -98,6 +139,10 @@
     @media (min-width: $breakpoint-tablet) {
       gap: 105px;
       margin-inline: 105px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-inline: 0;
     }
 
     scrollbar-color: $orange-400 $white;
@@ -150,19 +195,40 @@
   background-repeat: no-repeat;
   background-position-y: center;
   color: $white;
+
   padding: 95px 40px;
   @media (min-width: $breakpoint-tablet) {
     padding-block: 40px;
     background-size: 60px;
   }
-  text-align: center;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
+  @media (min-width: $breakpoint-desktop) {
+    padding: 62px 160px;
+  }
 
-  > * {
-    max-width: 440px;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    text-align: center;
+
+    @media (min-width: $breakpoint-desktop) {
+      max-width: 1110px;
+      margin: auto;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    > h1 {
+      max-width: 440px;
+
+      @media (min-width: $breakpoint-desktop) {
+        max-width: 550px;
+        @include text-preset(2);
+      }
+    }
   }
 }

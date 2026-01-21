@@ -13,7 +13,19 @@ section {
     padding-inline: 32px;
   }
 
+  @media (min-width: $breakpoint-desktop) {
+    &:not(.testimonial, .call-to-action) {
+      max-width: 1170px;
+      margin-inline: auto;
+      padding-bottom: 150px;
+    }
+  }
+
   &:first-of-type {
     padding-top: 56px;
+
+    @media (min-width: $breakpoint-desktop) {
+      padding-top: 120px;
+    }
   }
 }
