@@ -4,6 +4,22 @@ html {
   font-family: 'Be Vietnam Pro', sans-serif;
   background-color: $white;
   color: $blue-950;
+
+  background-image: url('../images/bg-tablet-pattern.svg');
+  background-repeat: no-repeat;
+  background-position-x: 50px;
+  background-position-y: -150px;
+  background-size: 150%;
+
+  @media (min-width: $breakpoint-tablet) {
+    background-size: 100%;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    background-size: auto;
+    background-position-x: 85%;
+    background-position-y: -150px;
+  }
 }
 
 section {

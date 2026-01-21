@@ -143,6 +143,23 @@ html {
   font-family: "Be Vietnam Pro", sans-serif;
   background-color: hsl(0, 0%, 100%);
   color: hsl(228, 39%, 23%);
+  background-image: url("../images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position-x: 50px;
+  background-position-y: -150px;
+  background-size: 150%;
+}
+@media (min-width: 768px) {
+  html {
+    background-size: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    background-size: auto;
+    background-position-x: 85%;
+    background-position-y: -150px;
+  }
 }
 
 section {
@@ -661,6 +678,10 @@ footer .wrapper .social-media-links .copyright {
 }
 @media (min-width: 1024px) {
   .call-to-action {
+    background-image: url("../images/bg-simplify-section-desktop.svg");
+    background-position-y: bottom;
+    background-position-x: left;
+    background-size: cover;
     padding: 62px 160px;
   }
 }

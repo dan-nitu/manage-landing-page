@@ -203,6 +203,10 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
+    background-image: url('../images/bg-simplify-section-desktop.svg');
+    background-position-y: bottom;
+    background-position-x: left;
+    background-size: cover;
     padding: 62px 160px;
   }
 
